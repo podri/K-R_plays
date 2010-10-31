@@ -25,7 +25,17 @@ int main(){
 	printf("LONG_MAX: %ld\n", LONG_MAX);
 	printf("ULONG_MAX: %lu\n", ULONG_MAX);
 
+	
+    printf("limits by computation:\n");
+    char c = 1;
+    char d = 0;
+    while( c > d ){
+		d = c;
+        c = c << 1;
+        c = c | 01;
+//        printf("c: %u d: %u\n",c ,d);
+    }
+    printf("CHAR_MAX: %u\n", d);
 	return 0;
-
 }
 
