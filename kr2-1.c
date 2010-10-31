@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <limits.h>
+#include <float.h>
 
 int main(){
 	printf("limits from header:\n");
@@ -24,6 +25,9 @@ int main(){
 	printf("LONG_MIN: %ld\n", LONG_MIN);
 	printf("LONG_MAX: %ld\n", LONG_MAX);
 	printf("ULONG_MAX: %lu\n", ULONG_MAX);
+	printf("FLT_MAX: %f\n", FLT_MAX);
+	printf("DBL_MAX: %e\n", DBL_MAX);
+	printf("LDBL_MAX: %Le\n", LDBL_MAX);
 
 	return 0;
 
