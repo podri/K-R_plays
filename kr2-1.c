@@ -29,17 +29,6 @@ int main(){
 	printf("DBL_MAX: %e\n", DBL_MAX);
 	printf("LDBL_MAX: %Le\n", LDBL_MAX);
 
-	
-    printf("limits by computation:\n");
-    char c = 1;
-    char d = 0;
-    while( c > d ){
-		d = c;
-        c = c << 1;
-        c = c | 01;
-//        printf("c: %u d: %u\n",c ,d);
-    }
-    printf("CHAR_MAX: %u\n", d);
 	return 0;
 }
 
