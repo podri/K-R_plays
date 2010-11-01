@@ -32,11 +32,11 @@ int getline(char s[],int lim)
     int c, i, state=0;
 //    for (i=0; i < lim-1 && (c=getchar())!=EOF && c!='\n'; ++i)
 //        s[i] = c;
-	for (i=0;i < lim-1;){
+	for (i=0;i < lim-1;++i){
 		c = getchar();
-		if (c==EOF) lim=0;	//break would be better
+		if (c==EOF) {lim=0;i=-1;}	//break would be better
 		else if (c=='\n') lim=0;
-		else {s[i] = c;++i;}	/*i can be increased only 
+		else {s[i] = c;/*++i;*/}	/*i can be increased only 
 								*if all other statement has benn checked
 								*/
 	}
