@@ -1,6 +1,7 @@
+/* Exercise 1-14. Write a program to print a histogram of the frequencies
+ * of different characters in its input.
+ */
 #include <stdio.h>
-#include <ctype.h>
-/* count digits, white space, others */
 main()
 {
     int c, i, max=0;
@@ -13,9 +14,10 @@ main()
     while ((c = getchar()) != EOF)
         if (c >= '0' && c <= '9')
             ++ndigit[c-'0'];
-        else if (c != ' ' && c != '\n' && c != '\t')
-            ++nchar[tolower(c)-'a'];
-    printf("digits :\n");
+        else if (c >= 'a' && c <= 'z')
+            ++nchar[c-'a'];
+		else if (c >= 'A' && c <= 'Z')
+			++nchar[c-'A'];
 	//histogram
 	for(i = 0; i < 10; ++i)
 		if (ndigit[i] > max) max = ndigit[i]; 

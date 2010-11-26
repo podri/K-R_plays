@@ -1,7 +1,10 @@
+/* Exercise 1-19. Write a function reverse(s) that reverses the
+ * character string s. Use it to write a program that reverses
+ * its input a line at a time.
+ */
 #include <stdio.h>
 #define MAXLINE 1000    /* maximum input line length */
 int getline(char line[], int maxline);
-/*void reverse_(char s[], int len); - first version */
 void reverse(char s[]); /* reverse the input  line */
 main()
 {
@@ -13,9 +16,6 @@ main()
     return 0;
 }
      
-
-		
-
 /* getline: read a line into s, return length    */
 int getline(char s[],int lim)
 {
@@ -29,24 +29,8 @@ int getline(char s[],int lim)
     s[i] = '\0';
     return i;
 }
-/* reverses the char array - first version 
-void reverse_(char s[], int len)
-{
-	char r[MAXLINE];
-	int i = 0;
-	len -= 2;
-    while (len > -1){
-        r[i] = s[len];
-		i++; len--;
-	}
-	r[i] = '\n';
-	++i;
-	r[i] = '\0';
-	i = 0;
-	while (s[i] = r[i]) i++;
-	
-}
-*/
+
+/* reverse: put the character string reversed into array s */
 void reverse(char s[])
 {
 	int i = 0;

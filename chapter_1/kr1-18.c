@@ -1,8 +1,12 @@
+/* Exercise 1-18. Write a program to remove trailing blanks and tabs
+ * from each line of input, and to delete entirely blank lines.
+ */ 
+
 #include <stdio.h>
 #define MAXLINE 1000    /* maximum input line length */
 int getline(char line[], int maxline);
 void rm_blank(char s[], int len);
-/* print the longest input  line */
+
 main()
 {
 	int length = 0;      
@@ -13,9 +17,6 @@ main()
 	}
     return 0;
 }
-     
-
-		
 
 /* getline: read a line into s, return length    */
 int getline(char s[],int lim)
@@ -30,7 +31,7 @@ int getline(char s[],int lim)
     s[i] = '\0';
     return i;
 }
-/* delete the spaces on the line-end -> 
+/* delete the spaces and tabs on the line-end -> 
  * it replaces the first tailing space with a '\0' */
 void rm_blank(char s[], int len)
 {
